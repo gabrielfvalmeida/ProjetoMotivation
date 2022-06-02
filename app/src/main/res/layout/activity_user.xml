@@ -28,7 +28,9 @@
         android:gravity="center"
         android:hint="@string/whats_name"
         android:textColorHint="@color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:maxLines="1"/>
 
     <Button
         android:id="@+id/button_save"
