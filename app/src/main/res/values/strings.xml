@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Projeto_Motivation</string>
     <string name="new_phrase">Nova Frase</string>
+    <string name="lets_begin">Vamos começar?</string>
+    <string name="whats_name">Qual seu nome?</string>
+    <string name="save">Salvar</string>
 </resources>
