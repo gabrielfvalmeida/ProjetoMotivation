@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserActivity"
+    tools:context=".ui.UserActivity"
     android:background="@color/purple">
 
     <TextView
@@ -27,10 +27,10 @@
         android:fontFamily="@font/cabin"
         android:gravity="center"
         android:hint="@string/whats_name"
-        android:textColorHint="@color/white"
-        android:textSize="24sp"
+        android:maxLines="1"
         android:textColor="@color/white"
-        android:maxLines="1"/>
+        android:textColorHint="@color/white"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/button_save"
