@@ -12,7 +12,7 @@ class Mock {
     val happy = MotivationConstants.FILTER.HAPPY
 
     private val mListPhrases: List<Phrase> = listOf(
-        Phrase("Não sabendo que era impossível, foi lá e fez.", happy),
+        Phrase("Não sabendo que era impossível, foi lá e fez!", happy),
         Phrase("Você não é derrotado quando perde, você é derrotado quando desiste!", happy),
         Phrase("Quando está mais escuro, vemos mais estrelas!", happy),
         Phrase("Insanidade é fazer sempre a mesma coisa e esperar um resultado diferente.", happy),
