@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.example.projeto_motivation.R
+import com.example.projeto_motivation.data.Mock
 import com.example.projeto_motivation.infra.SecurityPreferences
 import com.example.projeto_motivation.databinding.ActivityMainBinding
 import com.example.projeto_motivation.infra.MotivationConstants
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         if (view.id == R.id.button_new_phrase) {
-
+            showPhrase()
         } else if (view.id == R.id.button_logout) {
             logout()
         } else if (view.id in listOf(
@@ -68,17 +69,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         when (id) {
             R.id.image_all_inclusive -> {
-                binding.imageAllInclusive.setColorFilter(ContextCompat.getColor(this,R.color.white))
-                MotivationConstants.FILTER.ALL
+                binding.imageAllInclusive.setColorFilter(ContextCompat.getColor(this, R.color.white))
+                categoryID = MotivationConstants.FILTER.ALL
             }
             R.id.image_happy -> {
                 binding.imageHappy.setColorFilter(ContextCompat.getColor(this, R.color.white))
-                MotivationConstants.FILTER.HAPPY
+                categoryID = MotivationConstants.FILTER.HAPPY
             }
             R.id.image_sunny -> {
                 binding.imageSunny.setColorFilter(ContextCompat.getColor(this, R.color.white))
-                MotivationConstants.FILTER.SUNNY
+                categoryID = MotivationConstants.FILTER.SUNNY
             }
         }
+    }
+
+    private fun showPhrase() {
+        binding.textCenter.text = Mock().getPhrase(categoryID)
     }
 }
